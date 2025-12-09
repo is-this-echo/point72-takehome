@@ -7,8 +7,8 @@ exports.createTrade = (payload) => {
   const trade = {
     id: generateId(),
     accountId: payload.accountId,
-    symbol: payload.symbol.toUpperCase(),
-    side: payload.side, // 'BUY' or 'SELL'
+    ticker: payload.ticker.toUpperCase(),
+    side: payload.side, // BUY / SELL
     quantity: payload.quantity,
     price: payload.price,
     tradeTime: payload.tradeTime
@@ -26,7 +26,7 @@ exports.getTrades = (filters = {}) => {
 
   return allTrades.filter((t) => {
     if (filters.accountId && t.accountId !== filters.accountId) return false;
-    if (filters.symbol && t.symbol !== filters.symbol.toUpperCase())
+    if (filters.ticker && t.ticker !== filters.ticker.toUpperCase())
       return false;
     return true;
   });

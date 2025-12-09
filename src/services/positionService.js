@@ -1,16 +1,16 @@
 const tradeRepository = require("../repositories/tradeRepository");
 
 function computePositions(trades) {
-  const map = new Map(); // key = `${accountId}|${symbol}`
+  const map = new Map(); // key = `${accountId}|${ticker}`
 
   for (const t of trades) {
-    const key = `${t.accountId}|${t.symbol}`;
+    const key = `${t.accountId}|${t.ticker}`;
     let pos = map.get(key);
 
     if (!pos) {
       pos = {
         accountId: t.accountId,
-        symbol: t.symbol,
+        ticker: t.ticker,
         netQuantity: 0,
         averagePrice: null,
         grossNotional: 0,

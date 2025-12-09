@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const tradeController = require("../controllers/tradeController");
 
-// GET /api/trades?accountId=...&symbol=...
+// GET /api/trades?accountId=...&ticker=...
 router.get("/", tradeController.getTrades);
 
 // GET /api/trades/:id

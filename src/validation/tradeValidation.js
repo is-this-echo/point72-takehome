@@ -2,7 +2,7 @@ const Joi = require("joi");
 
 const tradeSchema = Joi.object({
   accountId: Joi.string().trim().min(1).required(),
-  symbol: Joi.string().trim().min(1).required(),
+  ticker: Joi.string().trim().min(1).required(),
   side: Joi.string().valid("BUY", "SELL").required(),
   quantity: Joi.number().integer().positive().required(),
   price: Joi.number().positive().required(),

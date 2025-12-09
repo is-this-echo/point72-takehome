@@ -5,7 +5,7 @@ exports.getTrades = (req, res, next) => {
   try {
     const filters = {
       accountId: req.query.accountId,
-      symbol: req.query.symbol,
+      ticker: req.query.ticker,
     };
 
     const trades = tradeService.getTrades(filters);
