@@ -8,6 +8,8 @@ In project root directory:
 
 `npm run dev` -> run using nodemon
 
+<img width="776" height="392" alt="arsfaw" src="https://github.com/user-attachments/assets/7dd3ff67-f07f-4ada-b051-67085fc56d0b" />
+
 or
 
 `npm start` -> run normally
